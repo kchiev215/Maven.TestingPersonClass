@@ -90,9 +90,80 @@ public class TestPerson {
 
         // When
         person.setAge(expected);
+        Integer actual = person.getAge();
 
         // Then
-        Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testSetGender(){
+        //Given
+        Person person = new Person();
+        String expected = "Female";
+
+        //When
+        person.setGender(expected);
+
+        //Then
+        String actual = person.getGender();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetYear(){
+        //Given
+        Person person = new Person();
+        Integer expected = 1993;
+
+        //When
+        person.setYear(expected);
+
+        //Then
+        Integer actual = person.getYear();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetHair(){
+        //Given
+        Person person = new Person();
+        String expected = "Black";
+
+        //When
+        person.setHairColor(expected);
+
+        //Then
+        String actual = person.getHairColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetFavoriteNum(){
+        //Given
+        Person person = new Person();
+        Integer expected = 22;
+
+        //When
+        person.setFavoriteNumber(expected);
+
+        //Then
+        Integer actual = person.getFavoriteNumber();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSetHeight(){
+        //Given
+        Person person = new Person();
+        Integer expected = 165;
+
+        //When
+        person.setHeight(expected);
+
+        //Then
+        Integer actual = person.getHeight();
+        Assert.assertEquals(expected,actual);
+    }
+
 }
